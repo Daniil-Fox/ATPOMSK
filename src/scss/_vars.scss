@@ -1,0 +1,14 @@
+// colors
+:root {
+  // base
+  --font-family: "Manrope", sans-serif;
+  --content-width: 1440px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --light-color: #fff;
+  --primary-color: #007692;
+  --primary-color-hover: #005b73;
+  --dark-color: #282828;
+}

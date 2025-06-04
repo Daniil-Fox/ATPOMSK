@@ -1,0 +1,29 @@
+.hero {
+  padding: 200px 0 150px;
+  background-image: linear-gradient(to right, #00759270, transparent),
+    url("./../img/hero.webp");
+  background-size: cover;
+  background-position: 0% 0, center;
+  background-repeat: no-repeat;
+  background-size: 80% 100%, cover;
+  border-radius: 0 0 30px 30px;
+  overflow: hidden;
+
+  &__content {
+    max-width: 1200px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__subtitle {
+    margin-bottom: 50px;
+    max-width: 80%;
+  }
+
+  &__btn {
+    font-size: 24px;
+    padding: 20px 24px;
+  }
+}

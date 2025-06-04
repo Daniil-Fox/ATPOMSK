@@ -1,0 +1,42 @@
+.nav {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    li {
+      a {
+        display: inline-block;
+        position: relative;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 171%;
+        color: var(--light-color);
+        transition: color 0.3s ease-out;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 100%;
+          width: 10%;
+          opacity: 0;
+          height: 1px;
+          transition: opacity 0.3s ease-in, width 0.3s ease-in;
+          background-color: currentColor;
+        }
+
+        @include hover {
+          &::after {
+            opacity: 1;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

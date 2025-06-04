@@ -1,0 +1,35 @@
+.marquee {
+  &__items {
+    padding: 20px 0;
+    display: flex;
+    min-width: 100%;
+    gap: 40px;
+    align-items: center;
+  }
+
+  &__row {
+    min-width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    align-content: center;
+    gap: 40px;
+    animation: marquee 60s linear infinite;
+  }
+
+  &__item {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+    color: var(--dark-color);
+    white-space: nowrap;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
