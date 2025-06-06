@@ -20,7 +20,7 @@ const camera = new THREE.PerspectiveCamera(
 );
 camera.position.x = 1.3;
 camera.position.y = 1;
-camera.position.z = 2.4;
+camera.position.z = 0.4;
 
 const renderer = new THREE.WebGLRenderer({
   canvas: canvas,
@@ -39,8 +39,10 @@ scene.add(directionalLight);
 
 const loader = new GLTFLoader();
 let model;
-loader.load("./box.glb", function (gltf) {
+loader.load("./shkaf.glb", function (gltf) {
   model = gltf.scene;
+  model.scale.set(4, 4, 4);
+  model.position.set(-0.5, 1.3, 0);
   scene.add(gltf.scene);
 });
 const controls = new OrbitControls(camera, renderer.domElement);
@@ -78,7 +80,7 @@ function animate() {
 
   if (!isUserInteracting) {
     controls.target.lerp(new THREE.Vector3(0, 0, 0), 0.02);
-    camera.position.lerp(new THREE.Vector3(1.3, 1, 2.4), 0.02);
+    camera.position.lerp(new THREE.Vector3(1.8, 0, 3.6), 0.02);
   }
 
   controls.update();
