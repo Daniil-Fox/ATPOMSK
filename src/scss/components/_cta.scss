@@ -1,0 +1,124 @@
+.cta {
+  padding: 100px 0;
+  background-color: var(--light-bg);
+  overflow: hidden;
+
+  @media (max-width: 992px) {
+    padding: 60px 0;
+  }
+
+  &__container {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    padding: 40px;
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: #fff;
+    position: relative;
+    @media (max-width: 992px) {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 55%;
+    flex-shrink: 0;
+
+    @media (max-width: 992px) {
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+  &__btn {
+    display: block;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+  &__desc {
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--text-color);
+    margin-bottom: 40px;
+    opacity: 0.8;
+
+    @media (max-width: 576px) {
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__form {
+    .form__group {
+      margin-bottom: 20px;
+    }
+
+    .form__input {
+      background-color: #fff;
+    }
+
+    .form__button {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    right: 100px;
+    bottom: 0;
+    flex-grow: 1;
+    width: 32%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -40px;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      left: 0;
+      top: 0;
+      background: radial-gradient(
+        circle,
+        var(--primary-color) 0%,
+        rgba(255, 255, 255, 0) 60%
+      );
+      opacity: 0.1;
+      z-index: 1;
+    }
+
+    img {
+      position: relative;
+      z-index: 2;
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 992px) {
+      min-height: 400px;
+      width: 100%;
+
+      img {
+        max-height: 400px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      min-height: 300px;
+
+      img {
+        max-height: 300px;
+      }
+    }
+  }
+}

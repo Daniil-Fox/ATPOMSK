@@ -1,0 +1,52 @@
+<div class="modal" data-modal>
+  <div class="modal__overlay" data-modal-close></div>
+  <div class="modal__content">
+    <button class="modal__close" type="button" aria-label="Закрыть модальное окно" data-modal-close>
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 1L17 17" stroke="black" stroke-linecap="round" />
+        <path d="M1 17L17 1" stroke="black" stroke-linecap="round" />
+      </svg>
+    </button>
+    <div class="modal__container">
+      <div class="modal__body">
+        <h2 class="modal__title title2">Заказать звонок</h2>
+        <p class="modal__desc">Оставьте свои контактные данные, и мы свяжемся с вами в ближайшее время</p>
+
+        <form class="modal__form form" action="#" method="POST" data-form>
+          <div class="form__group">
+            <input class="form__input" type="text" name="name" id="modal-name" required>
+            <label class="form__label" for="modal-name">Ваше имя</label>
+          </div>
+
+          <div class="form__group">
+            <input class="form__input" type="tel" name="phone" id="modal-phone" required>
+            <label class="form__label" for="modal-phone">Номер телефона</label>
+          </div>
+
+          <div class="form__group">
+            <textarea class="form__input form__input--textarea" name="message" id="modal-message"></textarea>
+            <label class="form__label" for="modal-message">Сообщение (необязательно)</label>
+          </div>
+
+          <div class="form__policy">
+            <label class="checkbox">
+              <input class="checkbox__input" type="checkbox" required>
+              <span class="checkbox__box"></span>
+              <span class="checkbox__text">Я согласен на обработку персональных данных в соответствии с <a
+                  href="/privacy" class="link">политикой конфиденциальности</a></span>
+            </label>
+          </div>
+
+          <button class="form__button btn btn--primary" type="submit">
+            <span>Отправить заявку</span>
+
+          </button>
+        </form>
+      </div>
+
+      <div class="modal__img">
+        <img src="./img/man.webp" alt="" aria-hidden="true">
+      </div>
+    </div>
+  </div>
+</div>
