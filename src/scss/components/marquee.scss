@@ -1,9 +1,9 @@
 .marquee {
   &__items {
-    padding: 20px 0;
+    // padding: 20px 0;
     display: flex;
     min-width: 100%;
-    gap: 40px;
+    gap: 0px;
     align-items: center;
   }
 
@@ -12,7 +12,7 @@
     flex-shrink: 0;
     display: flex;
     align-content: center;
-    gap: 40px;
+    gap: 0px;
     animation: marquee 60s linear infinite;
   }
 
@@ -22,6 +22,32 @@
     line-height: 140%;
     color: var(--dark-color);
     white-space: nowrap;
+
+    padding: 10px 20px;
+
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease-in-out;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--primary-color);
+      z-index: -1;
+      transform: translateY(100%);
+
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &:hover {
+      color: var(--light-color);
+      &::after {
+        transform: translateY(0);
+      }
+    }
   }
 }
 
