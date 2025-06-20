@@ -1,9 +1,23 @@
 .benefits {
   padding-top: 100px;
+
+  @include tablet {
+    padding-top: 60px;
+  }
+
   &__container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px 20px;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    @include small-tablet {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__item {
@@ -13,9 +27,9 @@
   }
 
   &__img {
+    flex-shrink: 0;
     width: 45px;
     height: 45px;
-    flex-shrink: 0;
 
     img {
       display: block;
@@ -28,8 +42,8 @@
   &__title {
     margin: 0;
     margin-bottom: 10px;
-    font-size: 20px;
     font-weight: 700;
+    font-size: 20px;
     line-height: 140%;
     color: var(--primary-color);
   }

@@ -1,36 +1,62 @@
 .hero {
+  // border-radius: 0 0 30px 30px;
+  overflow: hidden;
   padding: 200px 0 150px;
   background-image: linear-gradient(to right, #00759270, transparent),
     url("./../img/hero.webp");
-  background-size: cover;
   background-position: 0% 0, center;
-  background-repeat: no-repeat;
+  background-size: cover;
   background-size: 80% 100%, cover;
-  // border-radius: 0 0 30px 30px;
-  overflow: hidden;
+  background-repeat: no-repeat;
+
+  @include tablet {
+    padding: 150px 0 80px;
+  }
 
   &__content {
-    max-width: 1200px;
-    padding: 60px;
     border-radius: 20px;
-    backdrop-filter: blur(7px);
+    padding: 60px;
+    max-width: 1200px;
     background-color: rgba(0, 0, 0, 0.055);
+    backdrop-filter: blur(7px);
+
+    @include tablet {
+      margin-right: calc(-1 * var(--container-offset));
+      margin-left: calc(-1 * var(--container-offset));
+      border-radius: 0;
+    }
+
+    @include small-tablet {
+      padding: 20px;
+    }
   }
 
   &__title {
     margin-bottom: 40px;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+
+    @include tablet {
+      margin-bottom: 20px;
+    }
   }
 
   &__subtitle {
     margin-bottom: 50px;
     max-width: 80%;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+
+    @include tablet {
+      margin-bottom: 30px;
+    }
   }
 
   &__btn {
-    font-size: 24px;
     padding: 20px 24px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    font-size: 24px;
+
+    @include tablet {
+      font-size: 18px;
+    }
   }
 }

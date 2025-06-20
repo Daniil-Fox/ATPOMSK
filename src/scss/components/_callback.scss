@@ -2,23 +2,17 @@
   position: fixed;
   right: 30px;
   bottom: 30px;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-color: var(--primary-color);
-  border: none;
-  cursor: pointer;
   z-index: 100;
-  transition: transform 0.3s ease, background-color 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
-  @media (max-width: 576px) {
-    right: 20px;
-    bottom: 20px;
-    width: 50px;
-    height: 50px;
-  }
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background-color: var(--primary-color);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
 
   &:hover {
     background-color: var(--primary-color-hover);
@@ -42,10 +36,10 @@
     position: absolute;
     left: 0;
     top: 0;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
     width: 100%;
     height: 100%;
-    border-radius: 50%;
-    border: 2px solid var(--primary-color);
     animation: ripple 2s infinite;
 
     &:nth-child(2) {
@@ -71,12 +65,13 @@
 
 @keyframes ripple {
   0% {
-    transform: scale(1);
     opacity: 0.5;
+    transform: scale(1);
   }
+
   100% {
-    transform: scale(1.5);
     opacity: 0;
+    transform: scale(1.5);
   }
 }
 
@@ -85,14 +80,17 @@
   100% {
     transform: rotate(0);
   }
+
   2%,
   8% {
     transform: rotate(-15deg);
   }
+
   4%,
   6% {
     transform: rotate(15deg);
   }
+
   10% {
     transform: rotate(0);
   }

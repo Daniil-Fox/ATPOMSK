@@ -2,7 +2,7 @@
 
 @mixin burger {
   --burger-width: 30px;
-  --burger-height: 30px;
+  --burger-height: 20px;
   --burger-line-height: 2px;
 
   position: relative;
@@ -10,7 +10,7 @@
   padding: 0;
   width: var(--burger-width);
   height: var(--burger-height);
-  color: #000;
+  color: var(--primary-color);
   background-color: transparent;
   cursor: pointer;
 

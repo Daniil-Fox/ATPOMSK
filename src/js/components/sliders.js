@@ -10,4 +10,12 @@ new Swiper(".about__slider", {
     clickable: true,
     dynamicBullets: true,
   },
+  breakpoints: {
+    320: {
+      slidesPerView: "auto",
+    },
+    769: {
+      sliderPerView: 3,
+    },
+  },
 });

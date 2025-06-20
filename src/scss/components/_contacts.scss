@@ -4,31 +4,36 @@
   &__title {
     margin-bottom: 50px;
   }
+
   &__container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
+
   &__map {
     grid-column: 2 span;
-    min-height: 400px;
-    border-radius: 30px;
     overflow: hidden;
+    border-radius: 30px;
+    min-height: 400px;
   }
 
   &__info {
     font-style: normal;
   }
+
   &__right {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 20px;
   }
+
   &__btn {
-    text-align: center;
     justify-content: center;
+    text-align: center;
   }
+
   &__row {
     &:not(:last-child) {
       margin-bottom: 20px;
@@ -43,12 +48,12 @@
   }
 
   &__value {
-    text-decoration: underline;
     display: inline-flex;
     align-items: center;
-    gap: 10px;
     font-size: 18px;
+    text-decoration: underline;
     color: var(--primary-color);
+    gap: 10px;
 
     svg {
       width: 30px;

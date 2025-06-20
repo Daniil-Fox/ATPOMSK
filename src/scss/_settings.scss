@@ -30,7 +30,7 @@ a {
 }
 
 .site-container {
-  overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
+  overflow: hidden;
 }
 
 .is-hidden {
@@ -98,4 +98,16 @@ a {
 
 .page--ios .dis-scroll {
   position: relative;
+}
+
+.burger {
+  z-index: 120;
+  display: none;
+  margin-left: 20px;
+
+  @include tablet {
+    display: block;
+  }
+
+  @include burger;
 }
