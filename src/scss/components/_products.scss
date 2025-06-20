@@ -1,7 +1,9 @@
 .products {
   padding: 100px 0 50px;
-
-  @include tablet {
+  &--main {
+    margin: 60px 0;
+  }
+  @media (max-width: 1200px) {
     padding: 80px 0 40px;
   }
 
@@ -10,7 +12,7 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 
-    @include small-tablet {
+    @media (max-width: 768px) {
       grid-template-columns: 1fr;
     }
   }
@@ -33,23 +35,31 @@
     transition: background-color 0.3s ease;
     cursor: pointer;
 
-    @include hover {
-      background-color: #00759280;
+    @media (hover: hover) {
+      &:hover {
+        background-color: #00759280;
 
-      .products__img {
-        img {
-          filter: grayscale(0);
+        .products__img {
+          img {
+            filter: grayscale(0);
+          }
+        }
+
+        .products__capture {
+          color: var(--light-color);
         }
       }
-
-      .products__capture {
-        color: var(--light-color);
-      }
     }
 
-    @include small-tablet {
+    @media (max-width: 768px) {
       min-height: 300px;
     }
+  }
+
+  &__link {
+    position: absolute;
+    inset: 0;
+    z-index: 4;
   }
 
   &__img {
@@ -59,7 +69,7 @@
     width: auto;
     height: 80%;
 
-    @include small-tablet {
+    @media (max-width: 768px) {
       right: -5%;
     }
 

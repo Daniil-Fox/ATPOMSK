@@ -5,15 +5,15 @@
   line-height: 120%;
   color: var(--light-color);
 
-  @include tablet {
+  @media (max-width: 1200px) {
     font-size: 42px;
   }
 
-  @include small-tablet {
+  @media (max-width: 768px) {
     font-size: 36px;
   }
 
-  @include mobile {
+  @media (max-width: 576px) {
     font-size: 28px;
   }
 }
@@ -25,15 +25,15 @@
   line-height: 120%;
   color: var(--primary-color);
 
-  @include tablet {
+  @media (max-width: 1200px) {
     font-size: 32px;
   }
 
-  @include small-tablet {
+  @media (max-width: 768px) {
     font-size: 24px;
   }
 
-  @include mobile {
+  @media (max-width: 576px) {
     font-size: 20px;
   }
 }
@@ -46,15 +46,15 @@
   line-height: 140%;
   color: var(--light-color);
 
-  @include tablet {
+  @media (max-width: 1200px) {
     font-size: 24px;
   }
 
-  @include small-tablet {
+  @media (max-width: 768px) {
     font-size: 20px;
   }
 
-  @include mobile {
+  @media (max-width: 576px) {
     font-size: 18px;
   }
 }
@@ -70,7 +70,7 @@
     color: var(--primary-color);
   }
 
-  @include tablet {
+  @media (max-width: 1200px) {
     font-size: 16px;
   }
 }
@@ -86,11 +86,11 @@
     color: var(--primary-color);
   }
 
-  @include tablet {
+  @media (max-width: 1200px) {
     font-size: 16px;
   }
 
-  @include small-tablet {
+  @media (max-width: 768px) {
     font-size: 14px;
   }
 }
@@ -98,6 +98,8 @@
 .btn {
   position: relative;
   display: inline-flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
   outline: none;
   border: 1px solid #fff;
@@ -134,7 +136,7 @@
     }
   }
 
-  @include small-tablet {
+  @media (max-width: 768px) {
     font-size: 14px;
   }
 }
@@ -183,7 +185,7 @@
     }
   }
 
-  @include small-tablet {
+  @media (max-width: 768px) {
     font-size: 14px;
   }
 }
@@ -194,7 +196,7 @@
   padding: 40px;
   background-color: #fff;
 
-  @include small-tablet {
+  @media (max-width: 768px) {
     padding: 20px;
   }
 }

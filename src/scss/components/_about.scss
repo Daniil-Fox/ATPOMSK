@@ -1,7 +1,7 @@
 .about {
   padding: 50px 0;
 
-  @include tablet {
+  @media (max-width: 1200px) {
     padding: 30px 0;
   }
 
@@ -9,7 +9,7 @@
     width: 100%;
     max-width: 60%;
 
-    @include tablet {
+    @media (max-width: 1200px) {
       max-width: 100%;
     }
   }
@@ -17,7 +17,7 @@
   &__title {
     margin-bottom: 30px;
 
-    @include small-tablet {
+    @media (max-width: 768px) {
       margin-bottom: 20px;
     }
   }
@@ -25,7 +25,7 @@
   &__desc {
     margin-bottom: 50px;
 
-    @include small-tablet {
+    @media (max-width: 768px) {
       margin-bottom: 30px;
     }
   }
@@ -49,7 +49,7 @@
     flex-grow: 1;
     aspect-ratio: 1 / 1;
 
-    @include tablet {
+    @media (max-width: 1200px) {
       display: none;
     }
   }
@@ -63,7 +63,7 @@
 
   &__slider {
     .swiper-slide {
-      @include small-tablet {
+      @media (max-width: 768px) {
         width: 220px;
       }
     }
@@ -87,7 +87,7 @@
       height: 100%;
     }
 
-    @include small-tablet {
+    @media (max-width: 768px) {
       height: 320px;
     }
   }

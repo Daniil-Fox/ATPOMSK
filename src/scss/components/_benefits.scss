@@ -1,7 +1,7 @@
 .benefits {
   padding-top: 100px;
 
-  @include tablet {
+  @media (max-width: 1200px) {
     padding-top: 60px;
   }
 
@@ -10,12 +10,12 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 40px 20px;
 
-    @include tablet {
+    @media (max-width: 1200px) {
       grid-template-columns: repeat(2, 1fr);
       gap: 20px;
     }
 
-    @include small-tablet {
+    @media (max-width: 768px) {
       grid-template-columns: 1fr;
     }
   }
