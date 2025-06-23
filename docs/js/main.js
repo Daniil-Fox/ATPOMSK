@@ -100224,6 +100224,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_sliders_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/sliders.js */ "./src/js/components/sliders.js");
 /* harmony import */ var _components_fancybox_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/fancybox.js */ "./src/js/components/fancybox.js");
 /* harmony import */ var _components_modal_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/modal.js */ "./src/js/components/modal.js");
+/* harmony import */ var _components_splash_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/splash.js */ "./src/js/components/splash.js");
+
 
 
 
@@ -100456,6 +100458,38 @@ new swiper__WEBPACK_IMPORTED_MODULE_0__.Swiper(".product__slider", {
   thumbs: {
     swiper: thumbsProd
   }
+});
+
+/***/ }),
+
+/***/ "./src/js/components/splash.js":
+/*!*************************************!*\
+  !*** ./src/js/components/splash.js ***!
+  \*************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+document.addEventListener("DOMContentLoaded", function () {
+  const splash = document.getElementById("splash");
+  if (!splash) return;
+
+  // Ждём полной отрисовки path
+  window.addEventListener("load", function () {
+    // Ждём завершения анимации stroke
+    setTimeout(() => {
+      splash.classList.add("splash--fill");
+      // После заливки — glow и скрытие
+      setTimeout(() => {
+        splash.classList.add("splash--glow");
+        setTimeout(() => {
+          splash.classList.add("splash--hide");
+          setTimeout(() => {
+            splash.remove();
+          }, 700);
+        }, 1200);
+      }, 700); // время появления заливки
+    }, 2100); // время отрисовки stroke
+  });
 });
 
 /***/ }),

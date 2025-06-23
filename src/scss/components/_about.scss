@@ -31,10 +31,13 @@
   }
 
   &__pagination {
+    width: 100%;
     position: static;
     display: flex;
     align-items: center;
     justify-content: center;
+    transform: none !important;
+    margin: 0 auto;
     margin-top: 20px;
     width: 100%;
     transform: none;
