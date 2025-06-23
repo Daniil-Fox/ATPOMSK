@@ -21,6 +21,9 @@
       flex-direction: column;
       gap: 30px;
     }
+    @include small-tablet {
+      padding: 20px;
+    }
   }
 
   &__content {

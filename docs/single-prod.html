@@ -41,7 +41,7 @@
             <a href="#contacts">Контакты</a>
           </li>
           <li>
-            <a href="#documents">Документация</a>
+            <a href="#docs">Документация</a>
           </li>
         </ul>
       </nav>
@@ -169,20 +169,7 @@
     </div>
   </div>
 </div>
-<div id="splash" class="splash">
-  <svg class="splash__logo" width="147" height="63" viewBox="0 0 147 63" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path
-      d="M137 3H138.5V1H143V3H146.5V7H145V10H141.5V6H143V4.5H138.5V7H134.5V4.5H130.5V8H133V9H138.5V11H142V14.5H138.5V13H134V16H138V18H134V23H138V26H136V24H135V26H126V30H130V31H129V36H130V62H117V17H107V1H137V3ZM123 36H128V31H123V36ZM128 23H133V18H128V23ZM127 10V15H132V10H127Z"
-      fill="white" />
-    <path d="M46 40L47 21.5L0.644211 60.8775L0.5 43.5L48 1H63V16H61L57 62H43.5V53.5H23L37 40H46Z" fill="white" />
-    <path d="M48 15H62V2H48V15Z" fill="#005A7C" />
-    <path d="M81 62.5H64.5L70 16H65V1H105.5V17H86L81 62.5Z" fill="white" />
-    <path d="M104.5 18H91L87 62.5H101L104.5 18Z" fill="white" />
-    <path d="M81 62.5H64.5L70 16H65V1H105.5V17H86L81 62.5Z" stroke="white" stroke-width="0.4" />
-    <path d="M104.5 18H91L87 62.5H101L104.5 18Z" stroke="white" stroke-width="0.4" />
-    <path d="M80 61H66L71.5 15H66V2H104.5V16H85.5L80 61Z" fill="#005A7C" />
-  </svg>
-</div>
+
     <main class="main">
       <section class="product " id="product">
         <div class="container">
@@ -389,36 +376,69 @@
     </div>
   </div>
 </section>
-<script>
-  initMap();
-
-  async function initMap() {
-    // Промис `ymaps3.ready` будет зарезолвлен, когда загрузятся все компоненты основного модуля API
-    await ymaps3.ready;
-
-    const { YMap, YMapDefaultSchemeLayer } = ymaps3;
-
-    // Иницилиазируем карту
-    const map = new YMap(
-      // Передаём ссылку на HTMLElement контейнера
-      document.getElementById('map'),
-
-      // Передаём параметры инициализации карты
-      {
-        location: {
-          // Координаты центра карты
-          center: [37.588144, 55.733842],
-
-          // Уровень масштабирования
-          zoom: 10
-        }
-      }
-    );
-
-    // Добавляем слой для отображения схематической карты
-    map.addChild(new YMapDefaultSchemeLayer());
-  }
-</script>
+      <section class="docs" id="docs">
+  <div class="container">
+    <h2 class="section-title title2">Документация</h2>
+    <div class="docs__swiper swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="doc-card">
+            <div class="doc-card__top">
+              <h3 class="doc-card__title">Документ 1</h3>
+              <p class="doc-card__desc desc2">Краткое описание документа или инструкции.</p>
+            </div>
+            <a href="#" class="doc-card__link" target="_blank">Открыть</a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="doc-card">
+            <div class="doc-card__top">
+              <h3 class="doc-card__title">Документ 2</h3>
+              <p class="doc-card__desc desc2">Описание второго документа.</p>
+            </div>
+            <a href="#" class="doc-card__link" target="_blank">Открыть</a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="doc-card">
+            <div class="doc-card__top">
+              <h3 class="doc-card__title">Документ 1</h3>
+              <p class="doc-card__desc desc2">Краткое описание документа или инструкции.</p>
+            </div>
+            <a href="#" class="doc-card__link" target="_blank">Открыть</a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="doc-card">
+            <div class="doc-card__top">
+              <h3 class="doc-card__title">Документ 2</h3>
+              <p class="doc-card__desc desc2">Описание второго документа.</p>
+            </div>
+            <a href="#" class="doc-card__link" target="_blank">Открыть</a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="doc-card">
+            <div class="doc-card__top">
+              <h3 class="doc-card__title">Документ 1</h3>
+              <p class="doc-card__desc desc2">Краткое описание документа или инструкции.</p>
+            </div>
+            <a href="#" class="doc-card__link" target="_blank">Открыть</a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="doc-card">
+            <div class="doc-card__top">
+              <h3 class="doc-card__title">Документ 2</h3>
+              <p class="doc-card__desc desc2">Описание второго документа.</p>
+            </div>
+            <a href="#" class="doc-card__link" target="_blank">Открыть</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
     </main>
     <footer class="footer">
   <div class="container">
@@ -545,10 +565,8 @@
       </div>
     </div>
 
-    <!-- Разделитель -->
     <div class="footer__divider"></div>
 
-    <!-- Нижняя часть футера -->
     <div class="footer__bottom">
       <div class="footer__copyright">
         © 2024 АТП. Все права защищены

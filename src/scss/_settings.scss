@@ -129,3 +129,13 @@ a {
     }
   }
 }
+
+.marker {
+  width: 60px;
+  height: 60px;
+  background-image: url("./../img/marker.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  transform: translate(0, -100%);
+}

@@ -32,3 +32,8 @@ new Swiper(".product__slider", {
     swiper: thumbsProd,
   },
 });
+new Swiper(".docs__swiper", {
+  slidesPerView: "auto",
+  spaceBetween: 30,
+  speed: 500,
+});

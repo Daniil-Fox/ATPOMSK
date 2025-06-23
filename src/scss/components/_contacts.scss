@@ -1,14 +1,24 @@
 .contacts {
   padding: 50px 0 100px;
-
+  @include small-tablet {
+    padding: 30px 0;
+  }
   &__title {
     margin-bottom: 50px;
+
+    @include small-tablet {
+      margin-bottom: 20px;
+    }
   }
 
   &__container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+
+    @include small-tablet {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__map {
@@ -16,6 +26,11 @@
     overflow: hidden;
     border-radius: 30px;
     min-height: 400px;
+
+    @include small-tablet {
+      grid-column: 1;
+      border-radius: 15px;
+    }
   }
 
   &__info {
