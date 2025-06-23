@@ -92,14 +92,14 @@
     }
 
     &:hover {
-      color: #4a90e2;
+      color: var(--primary-color);
 
       .footer__icon {
-        fill: #4a90e2;
+        fill: var(--primary-color);
       }
 
       .footer__link {
-        color: #4a90e2;
+        color: var(--primary-color);
       }
     }
 
@@ -139,7 +139,7 @@
     }
 
     @include hover {
-      color: #4a90e2;
+      color: var(--primary-color);
     }
   }
 

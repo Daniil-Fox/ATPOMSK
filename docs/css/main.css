@@ -243,6 +243,35 @@ a {
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
+.just-validate-error-label {
+  display: none;
+}
+
+.just-validate-error-field {
+  color: red !important;
+}
+.just-validate-error-field::-webkit-input-placeholder {
+  color: red !important;
+}
+.just-validate-error-field::-moz-placeholder {
+  color: red !important;
+}
+.just-validate-error-field:-ms-input-placeholder {
+  color: red !important;
+}
+.just-validate-error-field::-ms-input-placeholder {
+  color: red !important;
+}
+.just-validate-error-field::placeholder {
+  color: red !important;
+}
+.just-validate-error-field ~ .form__label, .just-validate-error-field ~ .checkbox__text {
+  color: red !important;
+}
+.just-validate-error-field ~ .form__label a, .just-validate-error-field ~ .checkbox__text a {
+  color: inherit !important;
+}
+
 .title1 {
   margin: 0;
   font-weight: 500;
@@ -1351,13 +1380,13 @@ a {
   }
 }
 .footer__contacts-item:hover {
-  color: #4a90e2;
+  color: var(--primary-color);
 }
 .footer__contacts-item:hover .footer__icon {
-  fill: #4a90e2;
+  fill: var(--primary-color);
 }
 .footer__contacts-item:hover .footer__link {
-  color: #4a90e2;
+  color: var(--primary-color);
 }
 .footer__contacts-item:last-child {
   margin-bottom: 0;
@@ -1393,7 +1422,7 @@ a {
 }
 @media (any-hover: hover) {
   .footer__link:hover {
-    color: #4a90e2;
+    color: var(--primary-color);
   }
 }
 .footer__divider {

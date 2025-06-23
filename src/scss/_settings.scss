@@ -111,3 +111,21 @@ a {
 
   @include burger;
 }
+.just-validate-error-label {
+  display: none;
+}
+.just-validate-error-field {
+  color: red !important;
+
+  &::placeholder {
+    color: red !important;
+  }
+  & ~ .form__label,
+  & ~ .checkbox__text {
+    color: red !important;
+
+    a {
+      color: inherit !important;
+    }
+  }
+}

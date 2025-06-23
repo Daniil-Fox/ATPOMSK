@@ -130,26 +130,29 @@
 
         <form class="modal__form form" action="#" method="POST" data-form>
           <div class="form__group">
-            <input class="form__input" type="text" name="name" id="modal-name" required>
-            <label class="form__label" for="modal-name">Ваше имя</label>
+            <input class="form__input input-name" type="text" name="name" id="modal-name-m" autocomplete="">
+            <label class="form__label" for="modal-name-m">Ваше имя</label>
           </div>
 
           <div class="form__group">
-            <input class="form__input" type="tel" name="phone" id="modal-phone" required>
-            <label class="form__label" for="modal-phone">Номер телефона</label>
+            <input class="form__input input-tel" type="tel" name="phone" id="modal-phone-m" autocomplete="">
+            <label class="form__label" for="modal-phone-m">Номер телефона</label>
           </div>
 
           <div class="form__group">
-            <textarea class="form__input form__input--textarea" name="message" id="modal-message"></textarea>
-            <label class="form__label" for="modal-message">Сообщение (необязательно)</label>
+            <textarea class="form__input form__input--textarea" name="message" id="modal-message-m"></textarea>
+            <label class="form__label" for="modal-message-m">Сообщение (необязательно)</label>
           </div>
 
           <div class="form__policy">
-            <label class="checkbox">
-              <input class="checkbox__input" type="checkbox" required>
+            <label class="checkbox checkbox-group">
+              <input class="checkbox__input" checked type="checkbox">
               <span class="checkbox__box"></span>
               <span class="checkbox__text">Я согласен на обработку персональных данных в соответствии с <a
-                  href="/privacy" class="link">политикой конфиденциальности</a></span>
+                  href="/privacy.html" class="link">
+                  политикой конфиденциальности
+                </a>
+              </span>
             </label>
           </div>
 
@@ -237,13 +240,13 @@
 
         <form class="cta__form form" action="#" method="POST" data-form>
           <div class="form__group">
-            <input class="form__input" type="text" name="name" id="cta-name" required>
+            <input class="form__input" type="text" name="name" id="cta-name">
             <label class="form__label" for="cta-name">Ваше имя</label>
           </div>
 
           <div class="form__group">
-            <input class="form__input" type="tel" name="phone" id="cta-phone" required>
-            <label class="form__label" for="cta-phone">Номер телефона</label>
+            <input class="form__input" type="tel" name="phone" id="cta-tel">
+            <label class="form__label" for="cta-tel">Номер телефона</label>
           </div>
 
           <div class="form__group">
@@ -252,8 +255,8 @@
           </div>
 
           <div class="form__policy">
-            <label class="checkbox">
-              <input class="checkbox__input" name="Согласие с политикой" type="checkbox" required>
+            <label class="checkbox checkbox-group2">
+              <input class="checkbox__input " checked name="Согласие с политикой" type="checkbox">
               <span class="checkbox__box"></span>
               <span class="checkbox__text">Я согласен на обработку персональных данных в соответствии с <a
                   href="/privacy">политикой конфиденциальности</a></span>
